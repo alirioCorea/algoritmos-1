@@ -7,6 +7,7 @@ module.exports = {
         'custom-background': '#faeee7',
         'custom-text': '#33272a',
         'custom-button': '#ff8ba7',
+        'custom-white': '#fffffe',
       },
     },
   },

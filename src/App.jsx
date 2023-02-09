@@ -1,8 +1,11 @@
 import Formulario from "./components/Formulario"
 import Respuesta from "./components/Respuesta"
 import Imagen from "./assets/img/instructor.svg"
+import { useState } from "react"
 
 function App() {
+  const [div, setDiv] = useState(0);
+  const [mod, setMod] = useState(0);
   return (
     <div className="h-screen">
       <div className="h-2/4">
@@ -14,12 +17,18 @@ function App() {
         </div>
       </div>
       <div className="h-2/4">
-        <div className="md:flex">
-          <div className="md:w-3/6">
-          <Formulario/>
+        <div className="md:flex h-full">
+          <div className="md:w-3/6 md:h-full">
+          <Formulario
+            setDiv={setDiv}
+            setMod={setMod}
+          />
           </div>
           <div className="md:w-3/6">
-          <Respuesta/>
+          <Respuesta
+            div={div}
+            mod={mod}
+          />
           </div>
         </div>
       </div>
